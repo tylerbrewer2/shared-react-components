@@ -1,37 +1,15 @@
-const webpack = require('webpack');
-const path = require('path');
+var webpack = require('webpack');
+var path = require('path');
 
-const devBuild = process.env.NODE_ENV !== 'production';
-const nodeEnv = devBuild ? 'development' : 'production';
+var BUILD_DIR = path.resolve(__dirname, './dist');
+var APP_DIR = path.resolve(__dirname, './lib');
 
-const config = {
-  entry: [
-    'es5-shim/es5-shim',
-    'es5-shim/es5-sham',
-    'babel-polyfill',
-    './app/bundles/HelloWorld/startup/HelloWorldApp',
-    './app/bundles/SecureInbox/startup/SecureInboxApp'
-  ],
-
+var config = {
+  entry: APP_DIR + '/SharedReactComponents.js',
   output: {
-    filename: 'webpack-bundle.js',
-    path: '../app/assets/webpack',
+    path: BUILD_DIR,
+    filename: 'bundle.js'
   },
-
-  resolve: {
-    extensions: ['', '.js', '.jsx'],
-    alias: {
-      react: path.resolve('./node_modules/react'),
-      'react-dom': path.resolve('./node_modules/react-dom'),
-    },
-  },
-  plugins: [
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify(nodeEnv),
-      },
-    }),
-  ],
   module: {
     loaders: [
       {
@@ -48,13 +26,3 @@ const config = {
 };
 
 module.exports = config;
-
-if(devBuild) {
-  console.log('Webpack dev build for Rails'); // eslint-disable-line no-console
-  module.exports.devtool = 'eval-source-map';
-} else {
-  config.plugins.push(
-    new webpack.optimize.DedupePlugin()
-  );
-  console.log('Webpack production build for Rails'); // eslint-disable-line no-console
-}

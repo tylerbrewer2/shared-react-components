@@ -2,12 +2,13 @@
   "name": "shared-react-components",
   "version": "1.0.0",
   "description": "Test repo for sharing react components across apps",
-  "main": "index.js",
+  "main": "dist/bundle.js",
   "engines": {
     "node": "5.10.0",
     "npm": "3.5.0"
   },
   "scripts": {
+    "build": "webpack -w --config webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
