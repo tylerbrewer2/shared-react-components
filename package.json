@@ -2,7 +2,7 @@
   "name": "shared-react-components",
   "version": "1.0.0",
   "description": "Test repo for sharing react components across apps",
-  "main": "dist/bundle.js",
+  "main": "dist/webpack-bundle.js",
   "engines": {
     "node": "5.10.0",
     "npm": "3.5.0"
