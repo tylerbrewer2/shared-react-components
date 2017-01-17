@@ -3,6 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.Button = exports.Header = undefined;
 
 var _Header = require("./components/Header");
 
@@ -14,9 +15,5 @@ var _Button2 = _interopRequireDefault(_Button);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var components = {
-  Header: _Header2.default,
-  Button: _Button2.default
-};
-
-exports.default = components;
+exports.Header = _Header2.default;
+exports.Button = _Button2.default;
