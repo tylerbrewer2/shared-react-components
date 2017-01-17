@@ -4,7 +4,7 @@
   "description": "Test repo for sharing react components across apps",
   "main": "./dist/index.js",
   "scripts": {
-    "build": "babel lib --presets babel-preset-es2015 --out-dir dist",
+    "build": "babel lib --presets babel-preset-es2015 --out-dir temp && uglifyjs temp/*/* -c -m -o dist/index.js --source-map dist/index.js.map && rm -r temp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,8 +18,9 @@
   "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.18.0",
-    "babel-preset-react": "^6.16.0",
     "babel-preset-es2015": "^6.18.0",
-    "react": "^15.4.1"
+    "babel-preset-react": "^6.16.0",
+    "react": "^15.4.1",
+    "uglify-js": "^2.7.5"
   }
 }

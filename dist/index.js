@@ -1,14 +1,2 @@
-'use strict';
-
-var Header = require('./components/Header.jsx');
-
-var SharedReactComponents = {
-  Header: Header
-};
-
-module.exports = SharedReactComponents;
-
-// module.exports = function({percent = 100, amount}) {  
-//   const percentOff = (percent / 100) * amount;
-//   return percentOff;
-// }
+"use strict";function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}function Header(e){return _react2.default.createElement("h1",null,"Test message")}function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}function List(e){return _react2.default.createElement("h1",null,"Test message")}Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=Header;var _react=require("react"),_react2=_interopRequireDefault(_react);Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=List;var _react=require("react"),_react2=_interopRequireDefault(_react);
+//# sourceMappingURL=dist/index.js.map
