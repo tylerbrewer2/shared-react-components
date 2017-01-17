@@ -4,8 +4,7 @@
   "description": "Test repo for sharing react components across apps",
   "main": "./index.js",
   "scripts": {
-    "build": "babel lib --presets babel-preset-es2015 --out-dir temp && uglifyjs temp/*/* -c -m -o dist/index.js --source-map dist/index.js.map && rm -r temp",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel lib --presets babel-preset-es2015 --out-dir dist"
   },
   "repository": {
     "type": "git",

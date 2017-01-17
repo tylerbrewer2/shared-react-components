@@ -1,2 +1,22 @@
-"use strict";function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}function Button(e){return _react2.default.createElement("button",null,"Test Button")}function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}function Header(e){return _react2.default.createElement("h1",null,"Header")}Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=Button;var _react=require("react"),_react2=_interopRequireDefault(_react);Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=Header;var _react=require("react"),_react2=_interopRequireDefault(_react);
-//# sourceMappingURL=dist/index.js.map
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _Header = require("./components/Header");
+
+var _Header2 = _interopRequireDefault(_Header);
+
+var _Button = require("./components/Button");
+
+var _Button2 = _interopRequireDefault(_Button);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var components = {
+  Header: _Header2.default,
+  Button: _Button2.default
+};
+
+exports.default = components;
